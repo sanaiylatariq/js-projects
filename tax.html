@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Income" type="text" name="" id="income">
+<input placeholder="Tax Rate" type="text" name="" id="taxrate">
+<button onclick="tax()">calculate tax</button>
+<div id="result"></div>
+<div id="results"></div>
+
+<script>
+function tax(){
+let income = parseFloat(document.querySelector('#income').value)
+let taxrate = parseFloat(document.querySelector('#taxrate').value)
+let result = (income*taxrate)/100
+document.querySelector('#result').textContent = 'tax is ' +result
+document.querySelector('#results').textContent = `income after tax is ` +(income-result)
+
+
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

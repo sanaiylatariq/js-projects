@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input id="weight" placeholder="weight in pounds" type="text">
+<input id="height" placeholder="height in inches" type="text" name="">
+<input id="age" placeholder="age in years" type="text" name="">
+<input id="activitylevel" placeholder="activity level" type="text" name="">
+<button onclick="calorie()">calculate calorie needs for men</button>
+<div id="result"></div>
+
+<script>
+ function calorie(){
+let weight = parseInt(document.querySelector('#weight').value)
+let height = parseInt(document.querySelector('#height').value)
+let age = parseInt(document.querySelector('#age').value)
+let activitylevel = parseInt(document.querySelector('#activitylevel').value)
+let calories = ((66+(6.2*weight)+(12.7*height)-(6.8*age))*activitylevel)
+document.querySelector('#result').textContent = `your daily caloric needs are `+ calories+` calories`
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

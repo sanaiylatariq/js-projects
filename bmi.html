@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="height" placeholder="Height in meters">
+<input type="text" id="weight" placeholder="Weight in kilograms">
+<button onclick="two()">calculate BMI</button>
+
+<p id="result"></p>
+
+<script>
+function two () {
+    
+    let ht = parseFloat(document.querySelector('#height').value);
+    let wt = parseFloat(document.querySelector('#weight').value);
+
+
+
+
+
+
+
+    let bmi = wt / (ht * ht)
+    // document.querySelector('#result').textContent = 'Your BMI is ' + bmi.toFixed(2);
+ document.querySelector('#result').textContent = `your BMI is ` + bmi.toFixed(2);
+}
+two()
+</script>
+
+</body>
+</html> 

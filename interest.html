@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Principal Amount" type="text" name="" id="Principalamount">
+    <input placeholder="Annual Rate of Interest" type="text" name="" id="ari">
+    <input placeholder="Time in years" id="tiy" type="text">
+    <button onclick="interest()">Calculate Annual Interest</button>
+    <div id="result"></div>
+    <div id="results"></div>
+
+<script>
+function interest(){
+    let principalamount = parseFloat(document.querySelector('#Principalamount').value)
+let ari = parseFloat(document.querySelector('#ari').value)
+let time = parseFloat(document.querySelector('#tiy').value)
+let result =  principalamount*(ari/100)*time
+document.querySelector('#result').textContent = `Interest will be  ` +result.toFixed(2)
+document.querySelector('#results').textContent = `Amount after interest in ${time} years will be  ` +(principalamount+result).toFixed(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+interest()
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

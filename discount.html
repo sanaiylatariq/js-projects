@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="original price" type="text" name="" id="originalprice">
+<input placeholder="discount percentage" type="text" name="" id="dp">
+<button onclick="discount()">calculate discount</button>
+<div id="result"></div>
+<div id="results"></div>
+
+<script>
+function discount(){
+let originalprice = parseFloat(document.querySelector('#originalprice').value)
+let discountpercentage = parseFloat(document.querySelector('#dp').value)
+let result = (originalprice*discountpercentage)/100
+document.querySelector('#result').textContent = 'discount is ' +result
+document.querySelector('#results').textContent = `Price after discount is` +(originalprice-result)
+
+
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

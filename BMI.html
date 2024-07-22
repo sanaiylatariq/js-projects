@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="weight in kg" type="text" name="" id="weight">
+    <input placeholder="height in m" type="text" name="" id="height">
+    <button onclick="calculate()">calculate</button>
+    <div id="result"></div>
+</body>
+<script>
+    function calculate(){
+let weight = parseFloat(document.querySelector('#weight').value)
+let height = parseFloat( document.  querySelector('#height').value)
+let bmi = weight / (height * height)
+
+
+
+document.querySelector('#result').textContent = `BMI is`+ bmi.toFixed(2)
+
+
+
+
+
+
+
+
+}
+
+calculate()
+
+
+
+
+
+
+
+
+</script>
+</html>

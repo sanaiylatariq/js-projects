@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" placeholder="Distance in km" id="distance">
+    <input type="text" name="" placeholder="speed in km/h" id="speed">
+    <button onclick="fun()">calculate time</button>
+    <div id="results"></div>
+
+
+<script>
+    function fun(){
+let distance = parseFloat(document. querySelector('#distance').value)
+let speed = parseFloat(document.querySelector('#speed').value)
+
+
+
+
+
+
+let result = distance/speed
+document.querySelector('#results').textContent = `time taken will be`+ result.toFixed(2) +`hours`
+
+
+    }
+
+fun()
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

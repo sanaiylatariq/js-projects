@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Age" name="" id="age">
+    <input type="text" placeholder=" Systolic Blood Pressure" name="" id="bp">
+<button onclick="two()">calculate Stroke Risk</button>
+<div id="results"></div>
+<div class="guideline">
+</div>
+<div class="levels"></div>
+<script>
+    function two(){
+let age = parseFloat(document.querySelector('#age').value)
+let bp = parseFloat(document.querySelector('#bp').value);
+if(isNaN(age)||isNaN(bp)){
+    document.querySelector('#results').textContent = 'please enter valid number'
+    return
+}
+
+
+else{
+
+let result = ((age*bp)/1000)
+
+document.querySelector('#results').textContent =  result.toFixed(2) +`points` 
+
+    }
+let guide = document.querySelector('.guideline')
+guide.textContent = 'reminder::make sure these are estimated values as multiple other factors like diabetes,smoking,alcohol,cholesterol and cardiovascular factors also play part';
+let level = document.querySelector('.levels')
+level.textContent = `score of zero indictes low risk of stroke ::
+score of 1-2 indicates moderate risk`
+
+
+    }
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</html>

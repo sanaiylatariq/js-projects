@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" placeholder="speed in km/h" id="speed">
+    <input type="text" name="" placeholder="time in hours" id="time">
+<button onclick="two()">calculate distance travelled in km</button>
+<div id="results"></div>
+<script>
+
+function two(){
+    let speed = parseFloat(document.querySelector('#speed').value)
+    let time = parseFloat(document.querySelector('#time').value)
+
+let result = speed*time
+
+
+
+
+
+
+
+
+document.querySelector('#results').textContent = `distance travelled will be`  +     result   +  `km`
+
+
+
+
+}
+
+two()
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
